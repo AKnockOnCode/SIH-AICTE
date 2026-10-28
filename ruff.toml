@@ -1,0 +1,17 @@
+# Ruff settings for all Python in the repository (backend/, e2e/, scripts/).
+line-length = 160
+target-version = "py311"
+src = ["backend", "e2e", "scripts"]
+extend-exclude = ["backend/var"]
+
+[lint]
+select = ["E", "F", "W", "B", "UP", "SIM", "I"]
+ignore = ["B008", "SIM108", "E731", "UP007", "SIM102", "SIM105", "B905"]
+
+[lint.per-file-ignores]
+"backend/app/seed/texts.py" = ["E501"]
+"backend/app/seed/reference.py" = ["E501"]
+"backend/app/seed/generator.py" = ["E501"]
+"backend/app/seed/demo_story.py" = ["E501"]
+"backend/app/core/api.py" = ["E501"]
+"backend/tests/*" = ["E501"]

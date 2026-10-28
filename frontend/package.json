@@ -1,0 +1,46 @@
+{
+  "name": "agnidrishti-frontend",
+  "private": true,
+  "version": "0.9.0",
+  "description": "AgniDrishti web UI (React + TypeScript + Tailwind CSS v4, bundled with esbuild)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node build.mjs --watch",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json",
+    "check": "npm run typecheck && npm run build"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-drag": "^3.0.0",
+    "d3-force": "^3.0.0",
+    "d3-format": "^3.1.2",
+    "d3-sankey": "^0.12.3",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-shape": "^3.2.0",
+    "d3-zoom": "^3.0.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-icons": "^5.7.0"
+  },
+  "devDependencies": {
+    "@types/d3-array": "^3.2.2",
+    "@types/d3-drag": "^3.0.7",
+    "@types/d3-force": "^3.0.10",
+    "@types/d3-format": "^3.0.4",
+    "@types/d3-scale": "^4.0.9",
+    "@types/d3-selection": "^3.0.11",
+    "@types/d3-shape": "^3.2.0",
+    "@types/d3-zoom": "^3.0.8",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "esbuild": "^0.28.2",
+    "tailwindcss": "^4.3.3",
+    "typescript": "~6.0.3"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

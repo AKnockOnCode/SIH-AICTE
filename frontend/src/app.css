@@ -1,0 +1,166 @@
+@import "tailwindcss";
+
+/* AgniDrishti design tokens — palette from the problem statement / PPT:
+   navy chrome, blue = RB + primary action, orange = PGRC + attention, green = done + cells,
+   red reserved for conflict / overdue / critical. "-ink" shades are darker variants that meet
+   WCAG AA for small text on white; the base hues are used for fills, bars and borders. */
+@theme {
+  --color-navy: #1f3864;
+  --color-navy-ink: #1a2f55;
+  --color-navy-soft: #e7ecf5;
+  --color-blue: #0071c1;
+  --color-blue-ink: #005a9a;
+  --color-blue-soft: #e6f0fa;
+  --color-orange: #f28c28;
+  --color-orange-strong: #c9690a;
+  --color-orange-ink: #9a4f00;
+  --color-orange-soft: #fdeedd;
+  --color-green: #2e8b3e;
+  --color-green-ink: #226b2f;
+  --color-green-soft: #e4f2e6;
+  --color-red: #d64545;
+  --color-red-ink: #b02f2f;
+  --color-red-soft: #fae5e5;
+  --color-slate: #8a94a6;
+  --color-slate-ink: #4f5a6d;
+  --color-slate-soft: #eef1f6;
+  --color-paper: #f4f6fa;
+  --color-tint: #f3f6fb;
+  --color-line: #d9e2f0;
+  --color-line-strong: #c3cfe2;
+  --color-ink: #1e2533;
+  --color-muted: #5b6578;
+
+  --font-sans: "Segoe UI", "Noto Sans", "Helvetica Neue", Arial, "Liberation Sans", "Nirmala UI", "Noto Sans Devanagari",
+    "Kohinoor Devanagari", FreeSans, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--color-navy-ink);
+    line-height: 1.25;
+  }
+  a {
+    color: var(--color-blue-ink);
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 2px;
+    border-radius: 3px;
+  }
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+  ::selection {
+    background: #cfe3f7;
+  }
+}
+
+@layer components {
+  .field-input {
+    width: 100%;
+    border: 1px solid var(--color-line-strong);
+    border-radius: 6px;
+    background: #fff;
+    padding: 0.4375rem 0.625rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: var(--color-ink);
+  }
+  .field-input:focus {
+    outline: 2px solid var(--color-blue);
+    outline-offset: 0;
+    border-color: var(--color-blue);
+  }
+  .field-input:disabled {
+    background: var(--color-slate-soft);
+    color: var(--color-muted);
+  }
+  .field-input[aria-invalid="true"] {
+    border-color: var(--color-red);
+  }
+  .num {
+    font-variant-numeric: tabular-nums;
+  }
+  .data-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.8125rem;
+  }
+  .data-table th {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--color-tint);
+    color: var(--color-muted);
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-line);
+    white-space: nowrap;
+  }
+  .data-table td {
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid #e8edf5;
+    vertical-align: top;
+  }
+  .data-table tbody tr:hover td {
+    background: #f8fafd;
+  }
+  .data-table td.num,
+  .data-table th.num {
+    text-align: right;
+  }
+}
+
+/* PPT "window" title bar: navy band carrying "AgniDrishti | Page | context". */
+.titlebar-sep {
+  opacity: 0.55;
+  padding: 0 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@page {
+  size: A4;
+  margin: 14mm 12mm;
+}
+
+@media print {
+  body {
+    background: #fff;
+    font-size: 11px;
+  }
+  .print-break-avoid {
+    break-inside: avoid;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,13 @@
+# AgniDrishti backend runtime dependencies (Python >= 3.11; verified on 3.13 with the versions noted).
+starlette>=1.7,<2          # verified 1.7.0  - ASGI framework (FastAPI-style typed routes are in app/core/api.py)
+pydantic>=2.13,<3          # verified 2.13.5 - request/response schemas, OpenAPI JSON schema
+uvicorn>=0.54,<1           # verified 0.54.0 - ASGI server
+python-multipart>=0.0.18   # verified 0.0.32 - file uploads (imports, documents)
+numpy>=2.0,<3              # verified 2.5.3
+scipy>=1.13                # verified 1.18.1 - Cox model and Hawkes MLE optimisation
+scikit-learn>=1.5,<2       # verified 1.9.1  - TF-IDF + logistic regression (classifier, matcher)
+joblib>=1.4                # verified 1.6.0  - model persistence
+networkx>=3.3              # verified 3.7    - trust/society graph
+reportlab>=4.2,<6          # verified 5.0.1  - dossier PDF
+openpyxl>=3.1              # verified 3.1.5  - reading .xlsx imports
+XlsxWriter>=3.2            # verified 3.2.9  - .xlsx exports and templates

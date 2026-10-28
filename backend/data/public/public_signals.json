@@ -1,0 +1,61 @@
+{
+  "description": "Public signals verified during the build session (2026-10-27) by fetching each URL with the build assistant's web-fetch tool. Summaries are short paraphrases written for AgniDrishti. These are sector-level context items: none of them names an institution in the (fictional) Institution Master, so all are stored with match_status NO_MATCH. A public signal is NOT a complaint, an adjudication or an AICTE case, and never changes case data.",
+  "retrieval_note": "The build sandbox's shell had no general internet access, so raw copies were not cached in the repository. Run `python scripts/acquire_public_data.py` on a networked machine to download and cache them (robots.txt is checked first).",
+  "signals": [
+    {
+      "signal_type": "OFFICIAL_NOTICE",
+      "scope": "SECTOR",
+      "title": "AICTE Public Notice for Approval Process 2025-26 (Extension of Approval, new institutions, ODL/online)",
+      "publisher": "All India Council for Technical Education (AICTE)",
+      "source_url": "https://aicte.gov.in/sites/default/files/Public%20Notice%202025-26.pdf",
+      "published_date": "2024-11-04",
+      "retrieved_at": "2026-10-27T13:00:00Z",
+      "summary": "AICTE invites applications for new technical institutions, Extension of Approval for existing institutions and ODL/online programmes for 2025-26 under its Approval Process Handbook. Useful context for RB renewal/approval timelines; it names no institutions.",
+      "notes": "Advertisement number on the notice: RB/AICTE/M-131241/51/2024/2025-26 (dated 04.11.2024). Retrieval time approximate to the hour."
+    },
+    {
+      "signal_type": "OFFICIAL_NOTICE",
+      "scope": "SECTOR",
+      "title": "Lok Sabha Unstarred Question No. 1784 (answered 02.03.2020) — AICTE list of unapproved technical institutes",
+      "publisher": "Lok Sabha Digital Library (eparlib.nic.in) — Ministry of Human Resource Development answer",
+      "source_url": "https://eparlib.nic.in/bitstream/123456789/970096/1/AU1784.pdf",
+      "published_date": "2020-03-02",
+      "retrieved_at": "2026-10-27T13:00:00Z",
+      "summary": "The Ministry's answer says AICTE keeps a state-wise list of unapproved technical institutes on its website, issues public notices telling such institutes to obtain approval or close, and advises states to act against them.",
+      "notes": "Parliamentary record (official). Sector-level; no institution in the Institution Master is named. Retrieval time approximate to the hour."
+    },
+    {
+      "signal_type": "OFFICIAL_NOTICE",
+      "scope": "SECTOR",
+      "title": "Lok Sabha answer (30 July 2018) on steps to warn the public against fake universities and unapproved courses",
+      "publisher": "Ministry of Education (education.gov.in) — Lok Sabha answer by the Ministry of HRD",
+      "source_url": "https://www.education.gov.in/sites/upload_files/mhrd/files/lu1929.pdf",
+      "published_date": "2018-07-30",
+      "retrieved_at": "2026-10-27T13:00:00Z",
+      "summary": "The answer notes that some colleges ran engineering courses without the mandatory AICTE approval and that AICTE directs unapproved institutions to seek approval or close; UGC separately maintains a list of fake universities.",
+      "notes": "Official record. It names a few UGC-listed bodies, none of which is in the Institution Master; SAMANVAY does not reproduce those names. Retrieval time approximate to the hour."
+    },
+    {
+      "signal_type": "OFFICIAL_NOTICE",
+      "scope": "SECTOR",
+      "title": "Public Notice on fake or bogus technical institutions and courses in Haryana (13.01.2017)",
+      "publisher": "Directorate of Technical Education, Haryana (hosted on hsbte.org.in)",
+      "source_url": "https://hsbte.org.in/images2/Public_Notice.pdf",
+      "published_date": "2017-01-13",
+      "retrieved_at": "2026-10-27T13:00:00Z",
+      "summary": "State notice asking students and the public to report fake technical institutions and courses, to verify approval status on the AICTE, UGC and state websites, and warning that qualifications from unapproved bodies are not valid for state government jobs.",
+      "notes": "State-level official notice; names no institutions. Retrieval time approximate to the hour."
+    },
+    {
+      "signal_type": "NEWS_REPORT",
+      "scope": "SECTOR",
+      "title": "Govt puts up list of fake technical colleges",
+      "publisher": "The Tribune (Tribune News Service, Chandigarh)",
+      "source_url": "https://www.tribuneindia.com/news/archive/governance/govt-puts-up-list-of-fake-technical-colleges-353101",
+      "published_date": "2017-01-21",
+      "retrieved_at": "2026-10-27T13:00:00Z",
+      "summary": "Reports that the Haryana government published the names of unapproved technical institutions online and advised students to check approval status with AICTE, UGC and state bodies before admission.",
+      "notes": "Reputable published reporting; names no specific institution. Retrieval time approximate to the hour."
+    }
+  ]
+}

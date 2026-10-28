@@ -1,0 +1,12 @@
+{
+  "//": "Only for offline build environments without @types/react: maps React to a minimal local stub. Use tsconfig.json normally.",
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "react": ["./types-sandbox/react"],
+      "react/jsx-runtime": ["./types-sandbox/jsx-runtime"],
+      "react-dom/client": ["./types-sandbox/react-dom-client"]
+    }
+  },
+  "include": ["src", "types-sandbox"]
+}

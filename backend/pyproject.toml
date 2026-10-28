@@ -1,0 +1,7 @@
+[project]
+name = "agnidrishti-backend"
+version = "0.9.0"
+description = "AgniDrishti - integrated institution complaint monitoring prototype (SIH 2026, PS SIH26264)"
+requires-python = ">=3.11"
+
+# Lint settings live in ../ruff.toml (one configuration for backend/, e2e/ and scripts/).

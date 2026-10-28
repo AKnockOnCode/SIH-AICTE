@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local data (database, trained models, uploaded files, public-data cache)
+backend/var/
+
+# Node
+frontend/node_modules/
+
+# Secrets
+.env
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# frontend/dist is intentionally NOT ignored: a prebuilt UI lets the app run with Python only.
